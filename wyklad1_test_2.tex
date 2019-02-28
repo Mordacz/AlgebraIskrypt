@@ -118,17 +118,17 @@ W algebrze liniowej zazwyczaj utożsamiamy wektor $\V{OA}$ z punktem $A$, a za p
 \begin{minipage}[c]{0.30\textwidth}
   \vspace{3mm}
   \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,scale=1,font=\normalsize]
-    \draw[->] (0,0) -- (1,2) node[midway,above] {$u$}; % TODO: oddalić trochę nazwy wektorów od linii.
-    \draw[->] (0,0) -- (3,0) node[midway,below] {$v$};
+    \draw[->] (0,0) -- (1,2) node[midway,sloped,above] {$u$};
+    \draw[->] (0,0) -- (3,0) node[midway,sloped,below] {$v$};
     \draw[dashed] (1,2) -- (4,2);
     \draw[dashed] (3,0) -- (4,2);
-    \draw[->] (0,0) -- (4,2) node[midway,below] {$u+v$};
+    \draw[->] (0,0) -- (4,2) node[midway,sloped,below] {$u+v$};
   \end{tikzpicture} \\
   \small{Zasada równoległoboku} \\\\
   \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,scale=1,font=\normalsize]
-    \draw[->] (5,0) -- (6,2) node[midway,above] {$u$};
-    \draw[->] (6,2) -- (9,2) node[midway,below] {$v$};
-    \draw[->] (5,0) -- (9,2) node[midway,below] {$u+v$};
+    \draw[->] (5,0) -- (6,2) node[midway,sloped,above] {$u$};
+    \draw[->] (6,2) -- (9,2) node[midway,sloped,below] {$v$};
+    \draw[->] (5,0) -- (9,2) node[midway,sloped,below] {$u+v$};
   \end{tikzpicture} \\ \small{Zasada trójkąta}
 \end{minipage}
 \vspace{4mm}
@@ -187,10 +187,20 @@ Analogicznie można zdefiniować powyższe działania i własności dla przestrz
 \end{df}
 
 Znak wyznacznika informuje nas o orientacji pary wektorów, jeśli jest ujemny, to para wektorów ma orientacje zgodną z kierunkiem ruchu wskazówek zegara, zaś w przeciwnym przypadku przeciwzegarową.
-% TODO: ktoś jakiś rysunek?
+\begin{center}
+  \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,scale=1,font=\normalsize]
+    \draw[thick,->] (0,0) -- (3,0) node[pos=0.8, below] {$u$};
+    \draw[thick,->] (0,0) -- (2,2) node[pos=0.8, sloped, above] {$v$};
+    \draw[thick,->] (1.5,0) .. controls(1.4, 0.6) ..  (1, 1) node[pos=0.5, right] {$+$};
+  \end{tikzpicture}
+\end{center}
+\begin{prz}
+  Para $\Pair{u}{v}$ jest dodatnio zorientowana.
+\end{prz}
 
 Wartość bezwzględna wyznacznika równa jest polu równoległoboku rozpinanego przez parę wektorów, skąd możemy otrzymać drugą (równoważną) definicję wyznacznika:
 \begin{df}(geometryczna) Niech $U,V\in\RR^2,$ wtedy: $$\det(U,V) = \norm{U}\norm{V}\sin\angle(U,V).$$ \end{df}
+
 
 \end{document}
 
