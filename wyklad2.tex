@@ -34,7 +34,7 @@
 \renewcommand{\qed}{$\square$}
 
 % Definicja stylów:
-\theoremstyle{plain}
+\theoremstyle{definition}
 \newtheorem{tw}{Twierdzenie}[section]
 \theoremstyle{definition}
 \newtheorem{ft}{Fakt}[section]
@@ -50,6 +50,8 @@
 \newtheorem*{przy}{Przykłady}
 \theoremstyle{definition}
 \newtheorem*{uw}{Uwaga}
+\theoremstyle{definition}
+\newtheorem*{wn}{Wnioski}
 
 \begin{document}
 \section{Ciała i przestrzenie liniowe}
@@ -58,7 +60,7 @@
 Ciałem nazywamy układ $(K, + ,\cdot,1,0)$, gdzie:
     \begin{itemize} 
         \item[] $K$ jest zbiorem
-        \item[+]: $K \times K \rightarrow K$
+        \item[$+$]: $K \times K \rightarrow K$
         \item[$\cdot$]: $K \times K \rightarrow K$
         \item[] $0 \neq 1 \in K$ 
     \end{itemize} 
@@ -268,5 +270,80 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
         \item Każda kombinacja liniowa wykorzystuje skończenie wiele wektorów. \qed
     \end{enumerate}
 \end{dd} 
+
+\begin{tw}
+  Niech $ B \subset V $. Wówczas NWSR:\\
+  \begin{enumerate}[{(}1{)}]
+    \item $ B $ jest lnz i $ Lin(B) = V $
+    \item Każdy wektor zapisuje się jednoznacznie jako kombinacja liniowa wektorów z $ B $
+    \item $ B $ jest maksymalnym zbiorem lnz
+    \item $ B $ jest minimalnym zbiorem generującym
+  \end{enumerate}
+\end{tw}
+
+\begin{df}
+    Bazą $ B $  przestrzeni liniowej $ V $ nazywamy podzbiór spełniający którykolwiek/każdy z równoważnyc warónków (1) -- (4).
+\end{df}
+
+\begin{dd} \hfill
+    \begin{itemize}
+        \item[ (3) $\Rightarrow$ (1) ] $ B $ jest maxymalnym zbiorem lnz\\
+            Weźmy $ v \in V $. Gdyby $ v \in V \setminus Lin(B)$, to $ B \cup \{v\}$ byłby lnz. (sprzecność)
+        \item[(1) $\Rightarrow$ (4)] $ B $ jest lnz i generuje $ V $\\
+            Gdyby $ B' \subset B$, $ Lin(B') = V $, to $ v \in B \setminus B'$ byłby kombinacją liniową elementów z $ B'$. (sprzeczność z założeniem $B$ lnz)
+        \item[(4) $\Rightarrow$ (2)] $ B $ jest minimalnym zbiorem generującym\\
+            Weźmy dowolny wektor $ v \in V $. 
+            $$ v = \alpha_1v_1 + \dots + \alpha_nv_n = \beta_1v_1 + \dots + \beta_nv_n$$ 
+            gdzie $ \alpha_i, \beta_i \in K, v_i \in V$. Więc
+            $$ (\alpha_1 - \beta_1)v_1 + \dots + (\alpha_n - \beta_n)v_n = 0 $$
+            Zatem $ \alpha_i = \beta_i $. \\
+            (gdyby $ \alpha_i \neq \beta_i $, to $ v_i = -\frac{\alpha_1 - \beta_1}{\alpha_i - \beta_i}v_1 - \dots - \hat{v_i} - \dots -\frac{\alpha_n - \beta_n}{\alpha_i - \beta_i}v_n $,
+            czyli $ Lin(B \setminus \{v_i\}) = V $ co jest sprzeczne z zał. $ B $ - minimalny)
+            Więc $ v $ zapisuje się jednoznacznie jako kombinacja liniowa $ B $.
+        \item[(2) $\Rightarrow$ (3)] Każdy wektor zapisuje się jednoznacznie jako kombinacja liniowa $ B $\\
+            Zauważmy, że $ 0 = 0 v_1 + \dots + 0 v_n $, więc $ \alpha_1 = \alpha_2 = \dots = \alpha_n = 0 $, więc $ B $ jest lnz.
+            $ B \cup \{v\} $ nie jest lnz, bo $ v = \alpha_1v_1 + \dots + \alpha_nv_n$. Zatem B jest maksymalnym zbiorem lnz. \qed
+
+    \end{itemize}
+\end{dd}
+
+
+\begin{tw} Każda przestrzeń ma bazę.
+\end{tw}
+
+\begin{dd}
+    Tu mi się nie chce na razie pisać, bo ten dowód mi się nie podaba. (nie rozumiem go w 100\% xD)
+\end{dd}
+
+\begin{prz}
+    Istnieje $ B \subset \RR $, taki że każda liczba rzeczywista $ r $ zapisuje się w postaci
+    $ q_1r_1 + \dots + q_nr_n $, gdzie $ q_i \in \mathbb{Q}, r_i \in \RR $.
+\end{prz}
+
+\begin{tw} 
+    Niech $ V $ -- przestrzeń liniowa nak $ K $\\
+    $ N \subset G \subset V$, gdzie $ N $ lnz, $Lin(G) = V$\\
+    Wówczas istnieje baza $ B $ przestrzeni $ V $, taka że $ N \subset B \subset G $
+\end{tw}
+
+\begin{dd}
+    Ten dowód też jest jeszcze do napisania
+\end{dd}
+
+\begin{wn} \hfill
+    \begin{enumerate}[{(}1{)}]
+        \item Każdy zbiór lnz można powiększyć do bazy.
+        \item Każdy zbiór generujący zawiera bazę.
+    \end{enumerate}
+\end{wn}
+
+\begin{tw}
+    Każde dwie bazy przestrzeni liniowej $ V $ są równoliczne.
+\end{tw}
+
+\begin{df}
+    Wymiarem przestrzeni liniowej $ V $ ( $ dim(V) $ ) nazywamy moc bazy.
+\end{df}
+
 
 \end{document}
