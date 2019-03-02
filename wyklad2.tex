@@ -274,7 +274,7 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
 
 
 \begin{tw}
-  Niech $ B \subset V $. Wówczas NWSR:\\
+  Niech $ B \subset V $. Wówczas NWSR:
   \begin{enumerate}[{(}1{)}]
     \item $ B $ jest lnz i $ Lin(B) = V $
     \item Każdy wektor zapisuje się jednoznacznie jako kombinacja liniowa wektorów z $ B $
@@ -313,8 +313,15 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
 \begin{tw} Każda przestrzeń ma bazę.
 \end{tw}
 
-\begin{dd}
-    Tu mi się nie chce na razie pisać, bo ten dowód mi się nie podaba. (nie rozumiem go w 100\% xD)
+\begin{dd} 
+    ~\\
+    $ \{0\} \neq V $ (przestrzeń liniowa) \\
+    $ \mathcal{X} = \{ X \subset V : X \text{ lnz} \}, \mathcal{X}  \neq \{0\}$ \\
+    Niech $\mathcal{Y} \in \mathcal{X} $ to łańcuch (tzn. $\forall y_1, y_2 \in \mathcal{Y} \ (y_1 \subset y_2 \lor y_1 \supset y_2)$) \\
+    $\mathcal{Y}$ ma ograniczenie górne (tzn. $\exists Y \in \mathcal{X} \ \forall y \in \mathcal{Y} \ y \in Y$) \\
+    Y $\overset{\mathrm{def}}{=} \bigcup\limits_{y_i \in \mathcal{Y}} y_i \in \mathcal{X}$, bo Y lnz, bo każdy skończony podzbiór Y jest w pewnym $y_i \in $ Y, czyli jest lnz.
+    Zgodnie z lematem Kuratowskieg-Zorna w $\mathcal{X}$ istnieje element maksymalny (tzn. max zbiór lnz = baza). \qed
+    %Tu mi się nie chce na razie pisać, bo ten dowód mi się nie podaba. (nie rozumiem go w 100\% xD)
 \end{dd}
 
 \begin{prz}
@@ -329,7 +336,12 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
 \end{tw}
 
 \begin{dd}
-    Ten dowód też jest jeszcze do napisania
+    $ \mathcal{X} = \{ X \subset V : X \text{ lnz} , N \subset X \subset G\}$ \\
+    $ Y = \bigcup y \text{ lnz } V$ \\
+    $ N \subset Y \subset G \subset V $ \\
+    Zatem z lematu Kuratowskiego-Zorna w $\mathcal{X} $ istnieje element maksymalny  $B \in \mathcal{X}.$
+    $B$ lnz. Chcemy $Lin(B) = V$. Weźmy $g \in G \setminus B.$ Wówczas $N \subset B \cup \{g\} \subset G $ liniowo zależny (lz), czyli $g \in Lin(B)$. Analogicznie $G \subset Lin(B)$, czyli $V \subset Lin(G) \subset Lin(B)$, czyli B jest bazą. \qed
+    %Ten dowód też jest jeszcze do napisania
 \end{dd}
 
 \begin{wn} \hfill
