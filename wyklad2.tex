@@ -71,10 +71,10 @@ Ciałem nazywamy układ $(K, + ,\cdot,1,0)$, gdzie:
         \item[(D3)] $\forall a \in K \ \exists \text{-}a \in K \quad a + (\text{-}a) = (\text{-}a) + a = 0$
         \item[(D4)] $\forall a, b \in K \quad a+b = b+a$
         \item[(M1)] $\forall a, b, c \in K \quad (ab)c = a(bc) $
-        \item[(M2)] $\forall a \in K \quad 1a = a1 = a$
-        \item[(M3)] $\forall a \in K \setminus \{0\} \ \exists a^{-1} \in K \quad aa^{-1} = a^{-1}a = 1$
-        \item[(M4)] $\forall a, b \in K \quad ab = ba$
-        \item[(R)] $ \forall a,b, c \in K \quad (a+b)c = ac + bc $
+        \item[(M2)] $\forall a \in K \quad 1\cdot a = a\cdot 1 = a$
+        \item[(M3)] $\forall a \in K \setminus \{0\} \ \exists a^{-1} \in K \quad a\cdot a^{-1} = a^{-1}\cdot a = 1$
+        \item[(M4)] $\forall a, b \in K \quad a\cdot b = b\cdot a$
+        \item[(R)] $ \forall a,b, c \in K \quad (a+b)\cdot c = a\cdot c + b\cdot c $
     \end{itemize}
 \end{df}
 
@@ -99,10 +99,10 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
         \item[(D2)] $\forall u \in V \quad u+0 = 0+u = u$
         \item[(D3)] $\forall u \in V \ \exists \text{-}u \in V \quad u + (\text{-}u) = (\text{-}u) + u = 0$
         \item[(D4)] $\forall u, v \in K \quad u+v = v+u$
-        \item[(M1)] $\forall a, b \in K\  \forall u \in V \quad (ab)u = a(bu) $
-        \item[(M2)] $\forall u \in V \quad 1u = u1 = u$
-        \item[(R1)] $ \forall a,b \in K\ \forall u \in V \quad (a+b)u = au + bu $
-        \item[(R2)] $ \forall a \in K\ \forall u,v \in V \quad a(u+v) = au + av $
+        \item[(M1)] $\forall a, b \in K\  \forall u \in V \quad (a\cdot b)\cdot u = a\cdot (b\cdot u) $
+        \item[(M2)] $\forall u \in V \quad 1\cdot u = u$
+        \item[(R1)] $ \forall a,b \in K\ \forall u \in V \quad (a+b)\cdot u = a\cdot u + b\cdot u $
+        \item[(R2)] $ \forall a \in K\ \forall u,v \in V \quad a\cdot (u+v) = a\cdot u + a\cdot v $
     \end{itemize}
     \vspace{5mm}
     Elementy przestrzeni liniowej są nazywane wektorami. 
@@ -119,7 +119,7 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
             x_n
         \end{pmatrix} 
         : x_i \in \RR \quad
-        \right\}
+        \right\}\\
         \ K^n\ (\text{tak samo jak } \RR \text{ tylko } K ) %xDDD 
         \\
         K[x] \text{ - wielomiany zmiennej x o współczynnikach z } K \\
@@ -144,8 +144,8 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
 
 \begin{dd} 
     ~\\
-    $ 0w = 0 \in W$ \\
-    $(-1)w = -w \in W$
+    $ 0\cdot w = 0 \in W$ \\
+    $(-1)\cdot w = -w \in W$
 \end{dd}
 \newpage
 \begin{przy}
@@ -166,7 +166,7 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
     $
 \end{przy}
 \begin{ft}
-    Jeśli $w_i < V $ dla $i \in I$ to $\cap w_i < V$.
+    Jeśli $W_i < V $ dla $i \in I$ to $\cap W_i < V$.
 \end{ft}
 
 \begin{df} 
@@ -226,6 +226,9 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
     $\supset, Lin(A) < V, \text{więc jest zamknięte na} +,\cdot$
     \qed
 \end{dd}
+\begin{uw}
+    $Lin(\emptyset)=\{0\} < V $
+\end{uw}
 
 \begin{df}
     Zbiór wektorów $ A \subset V $ jest liniowo niezależny (lnz) jeśli żaden z tych wektorów nie jest kombinacją liniową pozostałych.
@@ -255,11 +258,10 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
          \item $v_1,\dots,v_n$ są liniowo niezależne \\
         $ \hspace*{25mm} \Updownarrow 
         \\ 
-        \forall \alpha_1,\dots,\alpha_n(\alpha_1v_1+\dots+\alpha_nv_n = 0 \Rightarrow \alpha_1 = \dots = \alpha_n =0$ 
+        \forall _{\alpha_1,\dots,\alpha_n\in K} (\alpha_1v_1+\dots+\alpha_nv_n = 0 \Rightarrow \alpha_1 = \dots = \alpha_n =0)$ 
         \item $A \in V $ jest zbiorem lnz $\iff$ każdy skończony podzbiór $A$ jest lnz.
     \end{enumerate}
 \end{ft}
-
 \begin{dd} \hfill 
     \begin{enumerate}[{(}1{)}]
         \item \begin{itemize}
@@ -290,13 +292,13 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
 \begin{dd} \hfill
     \begin{itemize}
         \item[ (3) $\Rightarrow$ (1) ] $ B $ jest maxymalnym zbiorem lnz\\
-            Weźmy $ v \in V $. Gdyby $ v \in V \setminus Lin(B)$, to $ B \cup \{v\}$ byłby lnz. (sprzecność)
+            Weźmy $ v \in V $. Gdyby $ v \in V \setminus Lin(B)$, to $ B \cup \{v\}$ byłby lnz. (sprzeczność)
         \item[(1) $\Rightarrow$ (4)] $ B $ jest lnz i generuje $ V $\\
-            Gdyby $ B' \subset B$, $ Lin(B') = V $, to $ v \in B \setminus B'$ byłby kombinacją liniową elementów z $ B'$. (sprzeczność z założeniem $B$ lnz)
+            Gdyby $ B' \subsetneq B$, $ Lin(B') = V $, to $ v \in B \setminus B'$ byłby kombinacją liniową elementów z $ B'$. (sprzeczność z założeniem $B$ lnz)
         \item[(4) $\Rightarrow$ (2)] $ B $ jest minimalnym zbiorem generującym\\
             Weźmy dowolny wektor $ v \in V $. 
             $$ v = \alpha_1v_1 + \dots + \alpha_nv_n = \beta_1v_1 + \dots + \beta_nv_n$$ 
-            gdzie $ \alpha_i, \beta_i \in K, v_i \in V$. Więc
+            gdzie $ \alpha_i, \beta_i \in K, v_i \in B$. Więc
             $$ (\alpha_1 - \beta_1)v_1 + \dots + (\alpha_n - \beta_n)v_n = 0 $$
             Zatem $ \alpha_i = \beta_i $. \\
             (gdyby $ \alpha_i \neq \beta_i $, to $ v_i = -\frac{\alpha_1 - \beta_1}{\alpha_i - \beta_i}v_1 - \dots - \hat{v_i} - \dots -\frac{\alpha_n - \beta_n}{\alpha_i - \beta_i}v_n $,
