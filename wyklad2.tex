@@ -9,7 +9,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
 \usepackage{polski}
-\usepackage[utf8]{inputenc} 
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 %\usepackage{indentfirst}
 \usepackage{ wasysym }
@@ -56,14 +56,14 @@
 \begin{document}
 \section{Ciała i przestrzenie liniowe}
 
-\begin{df} 
+\begin{df}
 Ciałem nazywamy układ $(K, + ,\cdot,1,0)$, gdzie:
-    \begin{itemize} 
+    \begin{itemize}
         \item[] $K$ jest zbiorem
         \item[$+$]: $K \times K \rightarrow K$
         \item[$\cdot$]: $K \times K \rightarrow K$
-        \item[] $0 \neq 1 \in K$ 
-    \end{itemize} 
+        \item[] $0 \neq 1 \in K$
+    \end{itemize}
     który spełnia następujące warunki (tzw. aksjomaty ciała):
     \begin{itemize}
         \item[(D1)] $\forall a, b, c \in K  \quad (a+b)+c = a+(b+c)$
@@ -78,22 +78,22 @@ Ciałem nazywamy układ $(K, + ,\cdot,1,0)$, gdzie:
     \end{itemize}
 \end{df}
 
-\begin{przy} 
+\begin{przy}
     ~\\
-    $ \RR, \mathbb{Q}, \mathbb{C} \\ 
-    \mathbb{F}_p = \{0, 1, \dots, p-1\} \text{ gdzie p to l. pierwsza} (+_{mod\ p}, \cdot_{mod\ p})\\ 
+    $ \RR, \mathbb{Q}, \mathbb{C} \\
+    \mathbb{F}_p = \{0, 1, \dots, p-1\} \text{ gdzie p to l. pierwsza} (+_{mod\ p}, \cdot_{mod\ p})\\
     \mathbb{Q}(\sqrt{2}) = \{a+b\sqrt{2} : a+b \in \mathbb{Q}\}$
 \end{przy}
 
 \begin{df}
 Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
-\begin{itemize} 
+\begin{itemize}
         \item[] $V$ jest zbiorem
         \item[+]: $V \times V \rightarrow V$
         \item[$\cdot$]: $K \times V \rightarrow V$
         \item[] $0 \in V$
-    \end{itemize} 
-    który spełnia następujące warunki(tzw. aksjomaty przestrzeni liniowej): 
+    \end{itemize}
+    który spełnia następujące warunki(tzw. aksjomaty przestrzeni liniowej):
     \begin{itemize}
         \item[(D1)] $\forall u, v, w \in V \quad (u+v)+w = u + (v+w)$
         \item[(D2)] $\forall u \in V \quad u+0 = 0+u = u$
@@ -105,22 +105,22 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
         \item[(R2)] $ \forall a \in K\ \forall u,v \in V \quad a\cdot (u+v) = a\cdot u + a\cdot v $
     \end{itemize}
     \vspace{5mm}
-    Elementy przestrzeni liniowej są nazywane wektorami. 
+    Elementy przestrzeni liniowej są nazywane wektorami.
     Przestrzeń liniowa czasami jest zwana przestrzenią wektorową.
 \end{df}
 
 \begin{przy}
     ~\\
-    $\RR^2, \RR^3, \RR^n = 
+    $\RR^2, \RR^3, \RR^n =
         \left\{
         \begin{pmatrix}
             x_1 \\
             \vdots \\
             x_n
-        \end{pmatrix} 
+        \end{pmatrix}
         : x_i \in \RR \quad
         \right\}\\
-        \ K^n\ (\text{tak samo jak } \RR \text{ tylko } K ) %xDDD 
+        \ K^n\ (\text{tak samo jak } \RR \text{ tylko } K ) %xDDD
         \\
         K[x] \text{ - wielomiany zmiennej x o współczynnikach z } K \\
         K_n[x] \text{ - wielomiany stopnia} \leqslant n \\
@@ -130,7 +130,7 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
         C'(\RR) = \{f: \RR \rightarrow \RR , f' \in C(\RR) \} \\
         C^k(\RR) = \{f: \RR \rightarrow \RR, f^{(k)} \in C(\RR) \} \\
         C^\infty(\RR) = \{f : \RR \rightarrow \RR, f \infty \text{ razy różniczkowalna} \} \ f\text{( to f-kcja gładka)} \\
-        \{0\} 
+        \{0\}
     $
 \end{przy}
 
@@ -142,7 +142,7 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
     Podprzestrzeń $W < V$ też jest przestrzenią liniową (z działaniami obciętymi z działań $V$).
 \end{ft}
 
-\begin{dd} 
+\begin{dd}
     ~\\
     $ 0\cdot w = 0 \in W$ \\
     $(-1)\cdot w = -w \in W$
@@ -150,16 +150,16 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
 \newpage
 \begin{przy}
     ~\\
-    $K_n[x] < K[x]$ \\ 
+    $K_n[x] < K[x]$ \\
     $C^\infty(\RR) < C'(\RR) < C(\RR) < F(\RR,\RR)$ \\
     $\{f \in C(\RR) : \forall x \in [-\infty,0] \ f(x) = 0\} < C(\RR)$ \\
     $\{P \in \RR_4[x] : P(1) = P(2) = 0\} < \RR_4[x]$ \\
     $\{(a_n) \in F(\mathbb{N},\RR) : \forall n \geqslant 2 \quad a_n = a_{n-1} + a_{n-2} \} < F(\mathbb{N},\RR)$ \\
-    $\left\{ 
+    $\left\{
         \begin{pmatrix}
-            x \\ 
-            y \\ 
-            z 
+            x \\
+            y \\
+            z
         \end{pmatrix}
         \in \RR^3 : 2x + 3y - 4z = 0
         \right\} < \RR^3
@@ -169,7 +169,7 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
     Jeśli $W_i < V $ dla $i \in I$ to $\cap W_i < V$.
 \end{ft}
 
-\begin{df} 
+\begin{df}
     Niech $V$ - przestrzeń liniowa nad K. Jeśli $A \subset V$, to \\
     $Lin(A) = \cap \{W < V: A \subset W \}$ nazywamy otoczkę liniową $A$ (podprzestrzenią $V$ generowaną przez $A$).
 \end{df}
@@ -178,34 +178,34 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
 \end{uw}
 
 \begin{przy}
-    ~\\ 
+    ~\\
     $Lin\left\{
         \begin{pmatrix}
-            1 \\ 
+            1 \\
             2
         \end{pmatrix}
     \right\} < \RR^2 \text{ (prosta)}
     $ \\
     $Lin\left\{
         \begin{pmatrix}
-            1 \\ 
+            1 \\
             2
-        \end{pmatrix}, 
+        \end{pmatrix},
         \begin{pmatrix}
-            0 \\ 
+            0 \\
             1
         \end{pmatrix}
         \right\} < \RR^2 \text{ (cała płaszczyzna)}
-    $\\ 
+    $\\
     $
         Lin\left\{
         \begin{pmatrix}
-            1 \\ 
+            1 \\
             1 \\
             1
-        \end{pmatrix}, 
+        \end{pmatrix},
         \begin{pmatrix}
-            1 \\ 
+            1 \\
             0 \\
             3
         \end{pmatrix}
@@ -239,7 +239,7 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
     \begin{minipage}[t]{0.5\textwidth}
     $
     a^{(n)}_i = \begin{cases}
-                0 & i \neq n \\ 
+                0 & i \neq n \\
                 1 & i = n
               \end{cases}
     $ \\
@@ -247,7 +247,7 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
     \end{minipage}%
     \begin{minipage}[t]{0.5\textwidth}
        $\overbrace{\{a^{(1)},a^{(2)},\dots,b\}}^{lnz} \subset F(\mathbb{N},\RR)$
-        
+
     \end{minipage}
 \end{prz}
 
@@ -256,13 +256,13 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
 \begin{ft} \hfill
     \begin{enumerate}[{(}1{)}]
          \item $v_1,\dots,v_n$ są liniowo niezależne \\
-        $ \hspace*{25mm} \Updownarrow 
-        \\ 
-        \forall _{\alpha_1,\dots,\alpha_n\in K} (\alpha_1v_1+\dots+\alpha_nv_n = 0 \Rightarrow \alpha_1 = \dots = \alpha_n =0)$ 
+        $ \hspace*{25mm} \Updownarrow
+        \\
+        \forall _{\alpha_1,\dots,\alpha_n\in K} (\alpha_1v_1+\dots+\alpha_nv_n = 0 \Rightarrow \alpha_1 = \dots = \alpha_n =0)$
         \item $A \in V $ jest zbiorem lnz $\iff$ każdy skończony podzbiór $A$ jest lnz.
     \end{enumerate}
 \end{ft}
-\begin{dd} \hfill 
+\begin{dd} \hfill
     \begin{enumerate}[{(}1{)}]
         \item \begin{itemize}
             \item[($\Downarrow$)] $\alpha_1v_1 + \dots + \alpha_nv_n = 0$ \\
@@ -271,7 +271,7 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
         \end{itemize}
         \item Każda kombinacja liniowa wykorzystuje skończenie wiele wektorów. \qed
     \end{enumerate}
-\end{dd} 
+\end{dd}
 \footnotetext{Suma bez elementu pod daszkiem}
 
 
@@ -286,7 +286,7 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
 \end{tw}
 
 \begin{df}
-    Bazą $ B $  przestrzeni liniowej $ V $ nazywamy podzbiór spełniający którykolwiek/każdy z równoważnyc warónków (1) -- (4).
+    Bazą $ B $  przestrzeni liniowej $ V $ nazywamy podzbiór spełniający którykolwiek/każdy z równoważnych warunków (1) -- (4).
 \end{df}
 
 \begin{dd} \hfill
@@ -296,8 +296,8 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
         \item[(1) $\Rightarrow$ (4)] $ B $ jest lnz i generuje $ V $\\
             Gdyby $ B' \subsetneq B$, $ Lin(B') = V $, to $ v \in B \setminus B'$ byłby kombinacją liniową elementów z $ B'$. (sprzeczność z założeniem $B$ lnz)
         \item[(4) $\Rightarrow$ (2)] $ B $ jest minimalnym zbiorem generującym\\
-            Weźmy dowolny wektor $ v \in V $. 
-            $$ v = \alpha_1v_1 + \dots + \alpha_nv_n = \beta_1v_1 + \dots + \beta_nv_n$$ 
+            Weźmy dowolny wektor $ v \in V $.
+            $$ v = \alpha_1v_1 + \dots + \alpha_nv_n = \beta_1v_1 + \dots + \beta_nv_n$$
             gdzie $ \alpha_i, \beta_i \in K, v_i \in B$. Więc
             $$ (\alpha_1 - \beta_1)v_1 + \dots + (\alpha_n - \beta_n)v_n = 0 $$
             Zatem $ \alpha_i = \beta_i $. \\
@@ -315,7 +315,7 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
 \begin{tw} Każda przestrzeń ma bazę.
 \end{tw}
 
-\begin{dd} 
+\begin{dd}
     ~\\
     $ \{0\} \neq V $ (przestrzeń liniowa) \\
     $ \mathcal{X} = \{ X \subset V : X \text{ lnz} \}, \mathcal{X}  \neq \{0\}$ \\
@@ -331,7 +331,7 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
     $ q_1r_1 + \dots + q_nr_n $, gdzie $ q_i \in \mathbb{Q}, r_i \in \RR $.
 \end{prz}
 
-\begin{tw} 
+\begin{tw}
     Niech $ V $ -- przestrzeń liniowa nak $ K $\\
     $ N \subset G \subset V$, gdzie $ N $ lnz, $Lin(G) = V$\\
     Wówczas istnieje baza $ B $ przestrzeni $ V $, taka że $ N \subset B \subset G $
@@ -362,5 +362,5 @@ Przestrzeń liniowa nad ciałem K, to układ $(V,+,\cdot\ ,0)$, gdzie:
 \end{df}
 
 
-{\color{white} $\widehat{}$} %PROBABLY THE BEST BUG FIX YOU'RE EVER GOING TO FIND 
+{\color{white} $\widehat{}$} %PROBABLY THE BEST BUG FIX YOU'RE EVER GOING TO FIND
 \end{document}
