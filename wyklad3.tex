@@ -58,7 +58,7 @@
 \begin{document}
 \section{Przekształcenia liniowe} 
 \begin{df}
-    Przekształceniem liniowym (homomorfizmem) przestrzeni liniowych $V \text{ i } W$ nazywamy odwzorowanie $F: W \rightarrow W$ t. że
+    Przekształceniem liniowym (homomorfizmem) przestrzeni liniowych $V \text{ i } W$ nazywamy odwzorowanie $F: V \rightarrow W$ t. że
     \begin{enumerate}[{(}1{)}]
         \item $\forall v, v' \in V \quad F(v+v') = F(v) = F(v')$ (addytywność) 
         \item $\forall v \in V \ \forall \alpha \in K \quad F(\alpha v) = \alpha F(v)$ (jednorodność)
@@ -79,7 +79,7 @@
         \item $F: C(\RR) \rightarrow \RR \quad F(f) =f(7)$
         \item $L: F(\mathbb{N},\RR)  $ \\ %pierdolona strzałka
         $L((a_1,a_2,\dots)) = (a_2,a_3,a_4,\dots)$ \\
-        $P((a_1,a_2,\dots)) = (0,a_1,a_2,\dots)$ 
+        $R((a_1,a_2,\dots)) = (0,a_1,a_2,\dots)$ 
     \end{enumerate}
 \end{przy}
 \begin{ft} \hfill 
@@ -101,7 +101,7 @@
 \begin{ft} \hfill 
     \begin{enumerate}[{(}1{)}]
         \item $Im F < W$
-        \item $kerF < W$
+        \item $kerF < V$
     \end{enumerate}
 \end{ft}
 
@@ -158,10 +158,19 @@
         $I \cap J = \emptyset $
     \end{minipage}
     %też trzeba wstawić jakiś gówniak, w sensie przerwę coś się dzieje i sie nie pojawia xD 
-    bazą $Im F$ jest $F(b'_i)_{i \in J}$ \\
+    bazą $Im F$ jest $\{F(b'_i)\}_{i \in J}$ \\
+    Będziemy teraz udowadniać, że to rzeczywiście jest baza\\
     $w \in Im F$ \\
     %piękny obrazek
-    $w = F(v) = F(\sum\limits_{i \in I'} \alpha_i b_i + \sum\limits_{i \in J'} \alpha'_i b'_i)$ % dopisać resztę linijki 
+    $w = F(v) = F(\sum\limits_{i \in I'} \alpha_i b_i + \sum\limits_{i \in J'} \alpha'_i b'_i) = \sum\alpha_i b_i + \sum\alpha'_i b'_i = \sum\alpha'_i b'_i $\\
+    $(|I'|, |J'|<\infty \quad I'\subset I, J'\subset J)$\\
+    więc $\{F(b'_i)\}_{i \in J} $ generuje $ImF$ \\
+    $\sum\limits_{i\in J} \alpha'_i F(b_i') = 0$\\
+    $\qquad \rotatebox{90}{$\,=$}$\\%nie umiem zrobić odstępu :(
+    $F(\sum \alpha'_i b_i') \quad $więc $ \sum \alpha'_i b_i' \in imF$\\
+    $\sum \alpha'_i b_i' =\alpha_i b_i$ \quad kombinacja liniowa bazy $kerF$\\
+    $B\cup B'$ jest bazą V więc $\alpha_i' = \alpha_i = 0$ \quad \qed
+     % dopisać resztę linijki 
     %wniosek generuj Im i dowód lnz
 \end{dd} 
 
@@ -178,7 +187,8 @@
     $F(1) = \begin{pmatrix} 1 \\ 1 \end{pmatrix} \in Im F$ \\
     $F(x^2) = \begin{pmatrix} 0 \\ 1 \end{pmatrix} \in Im F$
     $Lin \left\{ \begin{pmatrix} 0 \\ 1 \end{pmatrix} \begin{pmatrix} 1 \\ 1 \end{pmatrix} \right\} < Im F < \RR^2 $, czyli
-    $Im F = \RR^2$ %+ popierdolone równa się xD
+    $Im F = \RR^2$ \\%+ popierdolone równa się xD
+    $dimV = dim\RR[x] - dimImF = 5 - 2 = 3$
 \end{prz}
 
 \begin{df} 
@@ -225,7 +235,7 @@
         C = (c_1, \dots,c_m) \text{ - baza W} \\
     $
     Wówczas macierz \\
-        $$m^B_C (F) = ([F(b_1]_C,\dots,[F(b_n)]_C)$$ nazywamy \underline{macierzą przekształceń $F$} w bazach $B$ i $C$. 
+        $$m^B_C (F) = ([F(b_1)]_C,\dots,[F(b_n)]_C)$$ nazywamy \underline{macierzą przekształceń $F$} w bazach $B$ i $C$. 
     $$ A = \begin{pmatrix} a_{11} \ a_{12} \ \dots \ a_{1n} \\
                            a_{21} \ a_{22} \ \dots \ a_{2n} \\
                                    \        \vdots \  \\
@@ -259,7 +269,7 @@ $
         \item $ (A + A') \cdot B = A \cdot B + A' \cdot B \\
             A \cdot (B + B') = A \cdot B + A \cdot B' $
         \item $ I_k \cdot A = A  \cdot I_l = A  \hspace{1cm} \text{gdzie } I_k = \begin{pmatrix} 
-                1 \\ ~~  \ \ddots \  \\ ~~ \ ~~  \ 1
+                1 \ ~~ \ 0 \\ ~~ \ \ddots \ ~~ \\ 0 \ ~~ \ 1
             \end{pmatrix} $
     \end{enumerate}
 \end{ft}
@@ -273,9 +283,9 @@ $
 \end{ft}
 
 \begin{wn}
-    $ id: V \rightarrow V, B, C \text{ - bazy } V$
+    $ id: V \rightarrow V,\quad B, C \text{ - bazy } V$
     $$ [v]_c = m^B_C(id) \cdot [v]_B $$
-    gdzie $ m^b_C(id) = ( [b_1]_C, \ldots , [b_n]_C)$
+    gdzie $ m^B_C(id) = ( [b_1]_C, \ldots , [b_n]_C)$
 \end{wn}
 
 \begin{ft}
@@ -283,7 +293,11 @@ $
   $ B \text{ - bazą } U\\
     C \text{ - bazą } V\\
     D \text{ - bazą } W\\ $
-    Wtedy: $$ m^B_B(F) = m^C_B(id) \cdot m^C_C(F) \cdot m^B_C(id)$$
-      
+Wtedy: $m^B_D(G \circ F) = m^C_D(G) m^B_C(F)$
 \end{ft}
+\begin{wn}
+$ id: V \rightarrow V,\quad B, C \text{ - bazy } V$
+    Wtedy: $$ m^B_B(F) = m^C_B(id) \cdot m^C_C(F) \cdot m^B_C(id)$$
+
+\end{wn}
 \end{document}
