@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<!--
+convert:
+$ inkscape -z -D --file=wyklad3_obrazek.svg --export-pdf=wyklad3_obrazek.pdf
+-->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="105mm"
+   height="74mm"
+   viewBox="0 0 105 74"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="wyklad3_obrazek.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="186.5"
+     inkscape:cy="135"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g3738-6"
+     showgrid="false"
+     inkscape:window-width="1362"
+     inkscape:window-height="725"
+     inkscape:window-x="0"
+     inkscape:window-y="18"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-223)">
+    <g
+       id="g3738">
+      <ellipse
+         ry="33"
+         rx="21"
+         cy="260"
+         cx="25"
+         id="path3713"
+         style="fill:#cccccc;stroke:#000000;stroke-width:0.25" />
+      <ellipse
+         ry="9"
+         rx="7"
+         cy="260"
+         cx="25"
+         id="path3734"
+         style="fill:#808080;stroke:#000000;stroke-width:0.25" />
+    </g>
+    <g
+       transform="translate(53.445833,-1.0594726e-5)"
+       id="g3738-6">
+      <ellipse
+         ry="33"
+         rx="21"
+         cy="260"
+         cx="25"
+         id="path3713-7"
+         style="fill:#ffaaaa;stroke:#000000;stroke-width:0.25" />
+      <ellipse
+         style="fill:#cccccc;stroke:#000000;stroke-width:0.25"
+         id="path3778"
+         cx="25"
+         cy="260"
+         rx="18"
+         ry="26" />
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot3780"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         transform="matrix(0.25,0,0,0.25,-51,288)"><flowRegion
+           id="flowRegion3782"><rect
+             id="rect3784"
+             width="41"
+             height="50"
+             x="3"
+             y="-7" /></flowRegion><flowPara
+           id="flowPara3786">V</flowPara></flowRoot>      <flowRoot
+         xml:space="preserve"
+         id="flowRoot3788"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         transform="matrix(0.25,0,0,0.25,-53,223)"><flowRegion
+           id="flowRegion3790"><rect
+             id="rect3792"
+             width="39"
+             height="46"
+             x="353"
+             y="7" /></flowRegion><flowPara
+           id="flowPara3794">W</flowPara></flowRoot>      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:11px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.25"
+         x="39"
+         y="295"
+         id="text3798"><tspan
+           sodipodi:role="line"
+           id="tspan3796"
+           x="39"
+           y="295"
+           style="stroke-width:0.25">W</tspan></text>
+      <circle
+         style="fill:#000000;stroke:#000000;stroke-width:0.25"
+         id="path3800"
+         cx="23.5"
+         cy="260"
+         r="0.5" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.25px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M -30,251 23,260"
+         id="path3802"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.25px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M -30,269 23,260"
+         id="path3802-5"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.25px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -30,227 55,7"
+         id="path3802-6"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.25px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -30,293 55,-7"
+         id="path3802-6-2"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot3860"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         transform="matrix(0.25,0,0,0.25,-53.5,223)"><flowRegion
+           id="flowRegion3862"><rect
+             id="rect3864"
+             width="65"
+             height="50"
+             x="60"
+             y="30" /></flowRegion><flowPara
+           id="flowPara3866" /></flowRoot>      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:11px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.25"
+         x="-44"
+         y="280"
+         id="text3870"><tspan
+           sodipodi:role="line"
+           id="tspan3868"
+           x="-44"
+           y="280"
+           style="stroke-width:0.25">ker F</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:11px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.25"
+         x="13"
+         y="277"
+         id="text3874"><tspan
+           sodipodi:role="line"
+           id="tspan3872"
+           x="13"
+           y="277"
+           style="stroke-width:0.25">Im F</tspan></text>
+    </g>
+  </g>
+</svg>
