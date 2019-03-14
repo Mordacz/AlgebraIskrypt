@@ -1,0 +1,292 @@
+\documentclass{article}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\begin{document}
+  \subsection{Twierdzenie}
+  \[ F: V \rightarrow W \mathrm{p. liniowe} \]
+  baza $V$ --- $B=(b_1, ..., b_n)$ \\
+  baza $W$ --- $C=(c_1, ..., c_n)$ \\
+  \[ [F(v) ]_c = m^B_C(F)[v]_B \]
+  gdzie $m^B_C(F)=([F(b_1)]_C, ..., [F(b_n)]_C)$.
+
+  W szczególności:
+  \[ B = (b_1, ..., b_n) \]
+  \[ C = (c_1, ..., c_n) \]
+  obie bazami $V$, to
+  \[ [V]_C = m^B_C(id)[v]_B \]
+  gdzie $m^B_C(id)=([b_1]_C, ..., [b_n]_C)$
+
+  Jest to macierz przekształcenia.
+  Baza standardowa $\varepsilon=(e_1, ..., e_n)$ występuje
+  w~przestrzeniach $K^n$, gdzie
+  \[e_i=\begin{pmatrix}0 \\ ... \\ 0 \\ 1 \\ 0 \\ ... \\ 0\end{pmatrix}i\]
+
+  \subsection{Twierdzenie}
+  \[ F: V \rightarrow W \mathrm{p. liniowe} \]
+  \[ G: U \rightarrow V \mathrm{p. liniowe} \]
+  baza $U$ --- $B=(b_1, ..., b_k)$ \\
+  baza $V$ --- $C=(c_1, ..., c_l)$ \\
+  baza $W$ --- $D=(d_1, ..., d_m)$ \\
+  \[m^B_D(F\circ G)=m^C_D(F)m^B_C(G)\]
+
+  \[K^k \overset{G}{\longrightarrow} K^l \overset{F}{\longrightarrow} K^m\]
+  \[F(X) = AX\]
+  \[G(X) = BX\]
+  \[(F\circ G)(X) = F(G(X)) = A(BX) = (AB)X\]
+
+  W szczególności:
+  \[ F: V \rightarrow W \mathrm{p. liniowe} \]
+  \[ F^{-1}: W \rightarrow V \mathrm{p. liniowe} \]
+  baza $V$ --- $B=(b_1, ..., b_n)$ \\
+  baza $W$ --- $C=(c_1, ..., c_n)$ \\
+  \[m^B_C(F)m^C_B(F^{-1}) = I \]
+  \[m^C_B(F^{-1})m^B_C(F) = I \]
+
+  \subsection*{Dowód twierdzenia 1}
+  Weźmy $v \in V$ i~jego przedstawienie $v=\sum_{i=1}^n\alpha_ib_i$.
+  \[F(v)=F\left(\sum_{i=1}^n\alpha_ib_i\right)=\sum_{i=1}^n\alpha_iF(b_i)\]
+  \[F(b_i)=\sum_{j=1}^m\beta_{ji}c_j\]
+  gdzie
+  \[\begin{pmatrix}\beta_{1i} \\ ... \\ \beta_{mi}\end{pmatrix}=[F(b_i)]_C\]
+
+    \[F(v)=\sum_{i=1}^n\alpha_iF(b_i)=\sum_{i=1}^n\alpha_i\sum_{j=1}^m\beta_{ji}c_j=\]
+    \[=\sum_{i=1}^n\sum_{j=1}^m(\alpha_i\beta_{ji})c_j=\sum_{j=1}^m\left(\sum_{i=1}^n\alpha_i\beta_{ji}\right)c_j\]
+    \[[F(v)]_C=\begin{pmatrix}\sum\beta_{1i}\alpha_i\\...\\\sum\beta_{mi}\alpha_i\end{pmatrix}=
+      \begin{pmatrix}\beta_{11}&...&\beta_{1n}\\...&...&...\\\beta_{m1}&...&\beta_{mn}\end{pmatrix}
+        \begin{pmatrix}\alpha_1\\...\\\alpha_n\end{pmatrix}\]
+
+
+  \subsection*{Dowód twierdzenia 2}
+  \[U \overset{G}{\longrightarrow} V \overset{F}{\longrightarrow} W\]
+  No wiadomo, macierze się skrócą.
+
+  \subsection*{Definicja}
+  Przekształcenie liniowe $F: V \rightarrow W$ nazywamy
+  \textbf{izomorfizmem}, jeśli istnieje przekształcenie
+  liniowe $G: W\rightarrow V$, takie że $G\circ F = id_V$
+  i~$F\circ G=id_W$.
+
+  \subsection*{Fakt}
+  $F: V \rightarrow W$ jest izomorfizmem $\Leftrightarrow$ jest liniową
+  bijekcją.
+
+  \subsection*{Dowód}
+  $\Rightarrow$ oczywiste\\
+  $\Leftarrow$ $F^{-1}: W \rightarrow V$ (funkcja)
+
+  Potrzeba pokazać, że $F^{-1}$ jest liniowa. Przykładowo:
+  \[F^{-1}(w+w')=F^{-1}(F(v)+F(v'))=F^{-1}(F(v+v'))=v+v'=F^{-1}(w)+F^{-1}(w')\]
+  Analogicznie jednorodność.
+
+  \subsection*{Definicja}
+  Przestrzenie liniowe $V$ i~$W$ są izomorficzne ($V \simeq W$), gdy istnieje
+  izomorfizm $F: V \rightarrow W$.
+
+  \subsection*{Przykład}
+  \[K^n \simeq K_{n-1}[x]\]
+  \[F: K^n \rightarrow K_{n-1}[x]\]
+  \[\begin{pmatrix}a_0\\...\\a_n\end{pmatrix} \overset{F}{\longmapsto}
+    \left(a_0+a_1x+...+a_{n-1}x^{n-1}\right)\]
+
+  $F$ --- bijekcja, liniowa.
+
+  \subsection*{Przykład}
+  $M_{m\times n}(K)$ --- przestrzeń liniowa nad $K$.
+  \[M_{m\times n}(K) \simeq K^{mn}\]
+  \[F: M_{m\times n}(K) \rightarrow K^{mn}\]
+
+  \[(a_{ij}) \longmapsto \begin{pmatrix}a_{11}\\...\\a_{1n}\\
+    a_{21}\\...\\a_{mn}\end{pmatrix}\]
+  
+  \subsection*{Twierdzenie}
+  Jeśli $V$ jest skończenie wymiarową przestrzenią liniową nad $K$, to
+  \[V \simeq K^n\]
+  gdzie $n=\dim V$.
+
+  \subsection*{Dowód}
+  Niech $B=(b_1, ..., b_n)$ będzie bazą $V$. Wówczas
+  \[F: V \rightarrow K^n\]
+  \[F(v) = [v]_B\]
+  jest izomorfizmem.
+
+  \section*{MACIERZ ODWROTNA}
+  \subsection*{Definicja}
+  \textbf{Macierzą odwrotną} do $A \in M_{n\times n}(K)$ jest macierz
+  $B \in M_{n\times n}(K)$ taka, że
+  \[AB = BA = I\]
+  
+  \subsection*{Fakt}
+  Dla $A,B \in M_{n\times n}(K)$ zachodzi
+  \[AB=I \Rightarrow BA=I\]
+  Dowód: ćwiczenie.
+
+  \subsection*{Definicja}
+  Operacjami elementarnymi (wierszowymi) na macierzy prostokątnej $A$
+  nazywamy następujące operacje:
+  \begin{enumerate}
+    \item zamiana miejscami $i$-tego i~$j$-tego wiersza ($i \neq j$)
+    \item przemnożenie $i$-tego wiersza przez $\alpha \in K \setminus \{0\}$
+    \item dodanie do $j$-tego wiersza $\alpha$-krotności $i$-tego wiersza
+      ($i \neq j$, $\alpha \in K \setminus \{0\}$)
+  \end{enumerate}
+  Analogicznie definiujemy operacje elementarne (kolumnowe).
+
+  \subsection*{Uwaga}
+  Wszystkie te operacje można zapisać mnożąc z~lewej (wierszowe) lub
+  z~prawej (kolumnowe) przez odpowiednią macierz.
+
+  Ad 1. (zamiana $i$ i $j$)
+  \[\begin{pmatrix}
+     1 &...&...&...\\
+    ...& 0 & 1 &...\\
+    ...& 1 & 0 &...\\
+    ...&...&...& 1
+  \end{pmatrix}\begin{pmatrix}
+    a_{11}&...&a_{1n}\\
+    ...&a_{jk}&...\\
+    ...&a_{ik}&...\\
+    a_{m1}&...&a_{mn}
+  \end{pmatrix}=\begin{pmatrix}
+    a_{11}&...&a_{1n}\\
+    ...&a_{ik}&...\\
+    ...&a_{jk}&...\\
+    a_{m1}&...&a_{mn}
+  \end{pmatrix}\]
+
+  Analogicznie, wykonanie elementarnej operacji na $A$ to
+  mnożenie $A$ przez pewną macierz $B_{op}$.
+  
+  $B_{op}$ to po prostu $I$, na ktorym została wykonana ta operacja.
+
+  \subsection*{Fakt}
+  \[A = (a_{ij}) \in M_{m\times n}(K)\]
+  \begin{enumerate}
+    \item Jeśli ciąg operacji elementarnych \textit{wierszowych} przeprowadza
+      macierz \[(A|I)=\begin{pmatrix}
+        a_{11}&...&a_{1n}& 1 &...& 0 \\
+        ...&...&...&...& 1 &...\\
+        a_{m1}&...&a_{mn}& 0 &...& 1 \\
+      \end{pmatrix}\]
+      na $(I|B)$, to $B = A^{-1}$
+    \item Albo istnieje ciąg operacji elementarnych wierszowych
+      przeprowadzających $A$ na~$I$, albo istnieje ciąg operacji
+      wierszowych zamieniających $A$ na~macierz z~zerową kolumną/
+      zerowym wierszem
+  \end{enumerate}
+
+  \subsection*{Dowód}
+  \[(E_k...E_2E_1)A=I\]
+  \[E_k...E_2E_1I=E_k...E_2E_1=A^{-1}\]
+  Technika ta nazywana jest eliminacją Gaussa.
+
+  \subsection*{Przykład}
+  TODO % TODO
+
+  \section*{WYZNACZNIK}
+  Intuicyjnie: $n$-wymiarowa objętość (1: długość, 2: pole powierzchni, 3: objętość). \\
+  Zerowy wyznacznik oznacza liniową zależność wektorów w~macierzy. \\
+  Wzory Kramera --- rozwiązywanie układów równań przy pomocy wyznaczników.
+
+  \subsection*{Definicja}
+  Odwzorowanie
+  $F: V \times V \times ... \times V [[n\; \mathrm{razy}]] \rightarrow K$
+  (gdzie $V$ jest przestrzenią liniową nad $K^n$) nazywamy:
+  \begin{enumerate}
+    \item \textbf{wieloliniowym}, jeśli
+      $\forall_k\forall_{v_i,v_{i'}\in V}\forall_{\alpha\in K}$:
+      \[F(v_1, ..., v_k+v_{k'}, ..., v_n)
+      = F(v_1, ..., v_k+v_{k'})\]
+      oraz
+      \[F(v_1, ..., \alpha v_k, ..., v_n) = \alpha F(v_1, ..., v_n)\]
+    \item \textbf{antysymetrycznym}, jeśli $\forall_{i,j}$:
+      \[F(v_1, ..., v_i, ..., v_j, ..., v_n)
+      = -F(v_1, ..., v_j, ..., v_i, ..., v_n)\]
+  \end{enumerate}
+
+  \subsection*{Twierdzenie}
+  Dla każdej liczby $c \in K$ istnieje dokładnie jedno odwzorowanie
+  \[F: K^n \times K^n \times ... \times K^n [[n\; \mathrm{razy}]] \rightarrow K\]
+  które jest $n$-liniowe, antysymetryczne oraz $F(I) = c$.
+
+  \subsection*{Dowód}
+  \[e_i=\begin{pmatrix}0\\...\\1\\...\\0\end{pmatrix}i\]
+  \[A=(a_{ij})=(A_1, ..., A_n)\]
+  \[F(A_1, ..., A_n) = F(\sum_{i_1}a_{i_1}e_{i_1}, ..., \sum_{i_n}a_{i_n}e_{i_n}) =\]
+  (z~$n$-liniowości)
+  \[= \sum_{i_1}...\sum_{i_n}a_{i_1}...a_{i_n}F(e_{i_1}, ..., e_{i_n}) =\]
+  (Z~antysymetryczności $F(...v...v...)=-F(...v...v...)$,
+  czyli $2F(...v...v...)=0$. Dla ciał, że $1+1=0$ też, z~inną def. antysymetryczności)
+  \[= \sum_{\sigma\in S_n}a_{\sigma(1)1}...a_{\sigma(n)n}F(e_{\sigma(1)}, ..., e_{\sigma(n)}) = \]
+  \[= \sum_{\sigma\in S_n} \pm a_{\sigma(1)1}...a_{\sigma(n)n}F(e_1, ..., e_n)\]
+  gdzie $F(e_1, ..., e_n)=c$.
+  \[\sigma: \{1, 2, ..., n\} \overset{\mathrm{na}}{\underset{\mathrm{,,1-1''}}{\longrightarrow}} \{1, 2, ..., n\}\]
+
+  \subsection*{Lemat}
+  Jeśli permutację $\sigma$ rozłożymy na złożenie transpozycji, to $(-1)^{\#\mathrm{transpozycji}}$ jest niezależna od rozkładu (i~oznaczana jest $\mathrm{sgn}(\sigma)$).
+
+  \subsection*{Dowód}
+  Zdefiniujmy $t(\sigma)$ jako:
+  \[t(\sigma)=\{(i,j): i<j \land \sigma(i)>\sigma(j)\}\]
+  liczba nieporządków\\
+  Przykład:
+  \[\begin{pmatrix}1&...&n\\\sigma(1)&...&\sigma(n)\end{pmatrix}
+    =\begin{pmatrix}1&2&3&4&5\\5&4&1&3&2\end{pmatrix}\]
+
+  \[t(\sigma) = 8\]
+  \[\mathrm{sgn}(\sigma) = (-1)^8 = +1\]
+  \[\sigma(id) = 0\]
+
+  Transpozycja to permutacja postaci
+  \[\begin{pmatrix}
+    1&...&i&...&j&...&n\\
+    1&...&j&...&i&...&n
+  \end{pmatrix}\]
+
+  \[t(\mathrm{transpozycja})=2(j-i-1)+1\]
+  a~zatem
+  \[\mathrm{sgn}(\mathrm{transpozycja})=-1\]
+
+  Wystarczy pokazać, że jeśli
+  \[\sigma' = \tau \circ \sigma\;,\qquad \tau=\mathrm{transpozycja}\]
+  to
+  \[t(\sigma') \equiv t(\sigma)+1 \;(\mathrm{mod}\; 2)\]
+  \[1^\circ\; \sigma(i) < \sigma(j)\]
+  \[2^\circ\; \sigma(i) > \sigma(j)\]
+  czyli \#transpozycji $\equiv t(\sigma)$ (mod 2).
+  zatem $(-1)^{\#\mathrm{transpozycji}}$ nie zależy od rozkładu.\\
+  Pozostaje sprawdzić, że otrzymany wzór
+  \[F(A_1, ..., A_n)=\sum_{\sigma \in S_n}\mathrm{sgn}(\sigma)a_{\sigma(1)1}...a_{\sigma(n)n}\]
+  spełnia zadane warunki.
+
+  \subsection*{Definicja}
+  Wyznacznikiem nazywamy \textit{jedyną} funkcję
+  \[\det: (K^n)^n \rightarrow K\]
+  \[\left((K^n)^n \simeq M_{n \times n}(K)\right)\]
+  która jest $n$-liniowa, antysymetryczna i~$\det I=1$
+
+  \subsection*{Fakt}
+  \[\det A^T = \det A\]
+  \[\begin{pmatrix}1&2&3\\1&4&1\\2&0&0\end{pmatrix}
+    =\begin{pmatrix}1&1&2\\2&4&0\\3&1&0\end{pmatrix}\]
+
+  \subsection*{Dowód}
+  \[\sum_\sigma\mathrm{sgn}(\sigma)a_{\sigma(1)1}...a_{\sigma(n)n}\]
+  \[\sum_\sigma\mathrm{sgn}(\sigma^{-1})a_{\sigma^{-1}(1)1}...a_{\sigma^{-1}(n)n}\]
+  \[\sum_{\sigma^{-1}}\mathrm{sgn}(\sigma^{-1})a_{\sigma^{-1}(1)1}...a_{\sigma^{-1}(n)n}\]
+
+  \subsection*{Wniosek}
+  Dla macierzy $A \in M_{n \times n}(K)$ wyznacznik $\det A$:
+  \begin{enumerate}
+    \item zmienia znak przy zamianie miejscami dwóch wierszy/kolumn
+    \item nie zmienia się po dodaniu krotności jednego wiersza/kolumny do innego
+    \item mnoży się przez $t \in K$ przy pomnożeniu przez $t$ wybranego
+      wiersza/kolumny
+  \end{enumerate}
+
+  \subsection*{Tw (rozwinięcie Laplace'a)}
+  Cośtam, nie zdążyłem.
+\end{document}
+
+% vi: ts=2 sw=2 expandtab
