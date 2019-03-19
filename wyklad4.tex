@@ -81,7 +81,7 @@
 \begin{wn}
     \[ B = (b_1, ..., b_n) \]
     \[ C = (c_1, ..., c_n) \]
-    obie bazami $V$, to
+    obie są bazami $V$, więc
     \[ [V]_C = m^B_C(id)[v]_B \]
     gdzie $m^B_C(id)=([b_1]_C, ..., [b_n]_C)$
     
@@ -138,7 +138,7 @@
   $\Leftarrow$ $F^{-1}: W \rightarrow V$ (funkcja)
   Potrzeba pokazać, że $F^{-1}$ jest liniowa. Przykładowo:
   $$F^{-1}(w+w')=F^{-1}(F(v)+F(v'))=F^{-1}(F(v+v'))=v+v'=F^{-1}(w)+F^{-1}(w')$$ 
-  Analogicznie jednorodność.
+  Analogicznie dowodzimy jednorodność.
 \end{dd}
 
 \begin{df}
@@ -179,8 +179,8 @@
 \section{Macierz odwrotna}
 
 \begin{df}
-    \textbf{Macierzą odwrotną} do $A \in M_{n\times n}(K)$ jest macierz
-  $B \in M_{n\times n}(K)$ taka, że
+    \textbf{Macierzą odwrotną} do $A \in M_{n\times n}(K)$ nazywamy macierz
+  $B \in M_{n\times n}(K)$ taką, że
   \[AB = BA = I\]
 \end{df}
 
@@ -242,7 +242,7 @@
       na $(I|B)$, to $B = A^{-1}$
     \item Albo istnieje ciąg operacji elementarnych wierszowych
       przeprowadzających $A$ na~$I$, albo istnieje ciąg operacji
-      wierszowych zamieniających $A$ na~macierz z~zerową kolumną/
+      wierszowych zamieniających $A$ na~macierz z~zerową kolumną /
       zerowym wierszem
   \end{enumerate}
 \end{ft}
@@ -253,7 +253,7 @@
 \end{dd}
 
 \section{Wyznacznik}
-    Intuicyjnie: $n$-wymiarowa objętość (1: długość, 2: pole powierzchni, 3: objętość). \\
+    Intuicyjnie: $n$-wymiarowa objętość (dim = 1: długość, dim = 2: pole powierzchni, dim = 3: objętość). \\
     Zerowy wyznacznik oznacza liniową zależność wektorów w~macierzy. \\
     Wzory Kramera --- rozwiązywanie układów równań przy pomocy wyznaczników.
 
@@ -286,7 +286,7 @@
   \[F(A_1, ..., A_n) = F(\sum_{i_1}a_{i_1}e_{i_1}, ..., \sum_{i_n}a_{i_n}e_{i_n}) =\]
   (z~$n$-liniowości)
   \[= \sum_{i_1}...\sum_{i_n}a_{i_1}...a_{i_n}F(e_{i_1}, ..., e_{i_n}) =\]
-  (Z~antysymetryczności $F(...v...v...)=-F(...v...v...)$,
+  (z~antysymetryczności) $F(...v...v...)=-F(...v...v...)$,
   czyli $2F(...v...v...)=0$. Dla ciał, że $1+1=0$ też, z~inną def. antysymetryczności)
   \[= \sum_{\sigma\in S_n}a_{\sigma(1)1}...a_{\sigma(n)n}F(e_{\sigma(1)}, ..., e_{\sigma(n)}) = \]
   \[= \sum_{\sigma\in S_n} \pm a_{\sigma(1)1}...a_{\sigma(n)n}F(e_1, ..., e_n)\]
@@ -302,7 +302,7 @@
 \begin{dd}
     Zdefiniujmy $t(\sigma)$ jako:
   \[t(\sigma)=\{(i,j): i<j \land \sigma(i)>\sigma(j)\}\]
-  liczba nieporządków\\
+  liczbę nieporządków\\
   Przykład:
   \[\begin{pmatrix}1&...&n\\\sigma(1)&...&\sigma(n)\end{pmatrix}
     =\begin{pmatrix}1&2&3&4&5\\5&4&1&3&2\end{pmatrix}\]
@@ -311,7 +311,7 @@
   \[\mathrm{sgn}(\sigma) = (-1)^8 = +1\]
   \[\sigma(id) = 0\]
 
-  Transpozycja to permutacja postaci
+  Transpozycja to permutacja postaci:
   \[\begin{pmatrix}
     1&...&i&...&j&...&n\\
     1&...&j&...&i&...&n
@@ -343,8 +343,8 @@
 
 \begin{ft}
     \[\det A^T = \det A\]
-  \[\begin{pmatrix}1&2&3\\1&4&1\\2&0&0\end{pmatrix}
-    =\begin{pmatrix}1&1&2\\2&4&0\\3&1&0\end{pmatrix}\]
+  \[\begin{vmatrix}1&2&3\\1&4&1\\2&0&0\end{vmatrix}
+    =\begin{vmatrix}1&1&2\\2&4&0\\3&1&0\end{vmatrix}\]
 \end{ft}
 \begin{dd}
     \[\sum_\sigma\mathrm{sgn}(\sigma)a_{\sigma(1)1}...a_{\sigma(n)n}\]
@@ -377,6 +377,6 @@
         gdzie $A_{ij}$ to wyznacznik macierzy A z usuniętym i-tym wierszem i j-tą kolumną. 
         \end{tw}
 \begin{uw}
-    Tw. jest prawdziwe gdy zamienimy miejscami i i j.
+    Twierdzenie jest prawdziwe gdy zamienimy miejscami i i j.
 \end{uw}
 \end{document}
